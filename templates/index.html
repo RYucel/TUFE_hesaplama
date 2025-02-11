@@ -6,6 +6,7 @@
     <title>KKTC TÜFE Değişim Hesaplayıcısı</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
 </head>
 <body>
     <div class="container mt-4 mt-md-5">
@@ -86,7 +87,7 @@
                 </div>
 
                 <div class="infographic-section mt-4">
-                    <h3 class="infographic-heading">{{ lira_amount|int }} TL'nin Son tarihteki Karşılığı</h3>
+                    <h3 class="infographic-heading">{{ lira_amount|int }} TL Değer Kaybı</h3>
                     <div class="timeline-container"> <!-- Container for timeline layout -->
                         <div class="timeline-point start"> <!-- Start point -->
                             <span class="timeline-date">{{ start_date }}</span>
@@ -106,5 +107,18 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('{{ url_for('static', filename='service-worker.js') }}')
+              .then(registration => {
+                console.log('Service Worker registered: ', registration);
+              })
+              .catch(registrationError => {
+                console.log('Service Worker registration failed: ', registrationError);
+              });
+          });
+        }
+      </script>
 </body>
 </html>
