@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Load CPI data (assuming cpi_data.csv is in the same directory)
 try:
-    cpi_df = pd.read_csv('Python\CPI_calculator\cpi_data.csv')
+    cpi_df = pd.read_csv('cpi_data.csv')
     cpi_df['Date'] = pd.to_datetime(cpi_df['Date'], format='%Y-%m') # Parse Date column
     cpi_df.set_index('Date', inplace=True) # Set Date as index for efficient lookup
 except FileNotFoundError:
