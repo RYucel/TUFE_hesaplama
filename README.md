@@ -25,7 +25,7 @@ Hesaplama tamamlandıktan sonra, sonuçlar ekranın altında görüntülenecekti
 
 ## Veri Kaynağı
 
-Bu uygulama, Ocak 1978'den Aralık 2024'e kadar olan aylık TÜFE verilerini kullanmaktadır. Veri kaynağı [Veri Kaynağının Adı veya Kaynağa Bağlantı (Eğer varsa ekleyin, örneğin KKTC Devlet İstatistik Enstitüsü veya benzeri bir kurum)].
+Bu uygulama, Ocak 1978'den Aralık 2024'e kadar olan aylık TÜFE verilerini kullanmaktadır. Veri kaynağı KKTC Devlet İstatistik Kurumu TÜFE tablolarıdır.
 
 ## Teknolojiler
 
@@ -37,7 +37,7 @@ Bu web uygulaması aşağıdaki teknolojiler kullanılarak geliştirilmiştir:
 
 ## Katkıda Bulunma
 
-Bu proje açık kaynaklıdır ve katkılarınızı memnuniyetle karşılar. Katkıda bulunmak için lütfen [Katkıda Bulunma Talimatları veya Proje Reposuna Bağlantı (Eğer varsa ekleyin)] bölümüne bakın.
+Bu proje açık kaynaklıdır ve katkılarınızı memnuniyetle karşılar. Katkıda bulunmak için lütfen çekinmeyin.
 
 ## Lisans
 
