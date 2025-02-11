@@ -1,0 +1,167 @@
+/* static/css/style.css */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.card {
+    border-radius: 15px; /* More rounded card corners */
+    border: 0; /* Remove default border */
+}
+
+.btn-primary {
+    border-radius: 8px; /* More rounded button corners */
+}
+
+.results-box {
+    background-color: #ffffff; /* White background for results box */
+    border: 1px solid #dee2e6; /* Light border for results box */
+}
+
+.result-badge {
+    font-size: 1.2rem; /* Larger badge font size */
+    padding: 0.6em 1em; /* Adjust badge padding */
+    border-radius: 8px; /* Rounded badge corners */
+}
+
+.result-value {
+    font-weight: bold; /* Bold value in badge */
+    font-size: 1.3rem; /* Slightly larger value font size */
+}
+
+.result-explanation {
+    font-size: 1.1rem; /* Slightly larger explanation font size */
+    color: #6c757d; /* Muted color for explanation */
+}
+
+
+.results-infographic { /* Styles for the infographic results box */
+    background-color: #f8f9fa; /* Light gray background for infographic box */
+    border: 2px solid #ced4da; /* Slightly thicker border */
+    padding: 1.5rem; /* Increased padding */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.infographic-title { /* Styles for the "Sonuçlar" title in infographic */
+    font-size: 2rem; /* Larger title font size */
+    font-weight: bold; /* Bold title */
+    color: #343a40; /* Darker title color */
+}
+
+.infographic-section { /* Styles for infographic sections */
+    margin-bottom: 1.5rem; /* Spacing between sections */
+}
+
+.infographic-heading { /* Styles for infographic section headings */
+    font-size: 1.5rem; /* Larger heading font size */
+    font-weight: bold; /* Bold headings */
+    color: #495057; /* Darker heading color */
+    margin-bottom: 0.5rem; /* Spacing below headings */
+}
+
+.infographic-value-box { /* Styles for the value box (e.g., for CPI change) */
+    display: inline-block; /* Make it inline to wrap content */
+    padding: 0.75rem 1.25rem; /* Padding for value box */
+    border-radius: 10px; /* Rounded corners for value box */
+}
+
+.infographic-value-box.bg-success { /* Target specifically the green value box */
+    background-color: #28a745 !important; /* Ensure green is still applied, !important if needed to override Bootstrap */
+    color: white; /* Change text color to white for better contrast */
+}
+
+.infographic-value { /* Styles for infographic values */
+    font-size: 1.8rem; /* Larger value font size */
+    font-weight: bold; /* Bold values */
+    color: white; /* White value text color (for use with colored backgrounds) */
+}
+
+.infographic-arrow { /* Styles for arrow diagram text */
+    font-size: 1.2rem; /* Larger arrow text font size */
+    line-height: 1.6; /* Increased line height for arrow diagram */
+}
+
+.infographic-amount { /* Styles for amounts in arrow diagram */
+    font-weight: bolder; /* Even bolder amounts */
+    color: #007bff; /* Primary color for amounts */
+}
+
+.result-explanation { /* Keep existing styles for explanation, or adjust if needed */
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-top: 1rem; /* Add some top margin */
+    text-align: center; /* Ensure explanation is centered */
+}
+
+
+.timeline-container { /* Container for timeline layout */
+    display: flex; /* Use flexbox for horizontal arrangement */
+    align-items: flex-start; /* Change to flex-start for top alignment of boxes */
+    justify-content: center; /* Center items horizontally */
+    position: relative; /* For positioning the arrow */
+    margin-top: 1rem; /* Add some top margin */
+}
+
+.timeline-point { /* Styles for start and end points */
+    text-align: center; /* Center text within points */
+    padding: 1rem 1.5rem; /* Padding for points */
+    border-radius: 10px; /* Rounded corners for points */
+    background-color: #ffffff; /* White background for points */
+    border: 1px solid #ced4da; /* Light border for points */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    width: 220px; /* Increased width to accommodate larger numbers */
+    min-width: 220px; /* Ensure minimum width is set */
+    word-break: keep-all; /* Prevent word break within numbers if possible */
+    white-space: nowrap; /* Prevent text wrapping if possible */
+    display: flex;          /* Enable flexbox for vertical alignment */
+    flex-direction: column; /* Stack date and amount vertically */
+    justify-content: center; /* Vertically center content */
+}
+
+.timeline-point.start { /* Styles for start point (optional: different styling if needed) */
+    /* You can add specific styles for the start point if needed */
+}
+
+.timeline-point.end { /* Styles for end point (optional: different styling if needed) */
+    /* You can add specific styles for the end point if needed */
+}
+
+.timeline-date { /* Styles for dates in timeline points */
+    display: block; /* Make date take full width */
+    font-size: 1rem; /* Date font size */
+    color: #6c757d; /* Muted date color */
+    margin-bottom: 0.5rem; /* Spacing below date */
+    width: 100%; /* Ensure date takes full width of container */
+}
+
+.timeline-amount { /* Styles for amounts in timeline points */
+    display: block; /* Make amount take full width */
+    font-size: 1.4rem; /* Amount font size */
+    font-weight: bold; /* Bold amounts */
+    color: #007bff; /* Primary color for amounts */
+    overflow-wrap: break-word; /* Allow wrapping if necessary as a last resort */
+    word-wrap: break-word; /* For older browsers */
+    hyphens: auto; /* Enable hyphenation if wrapping is unavoidable */
+}
+
+.timeline-arrow { /* Styles for the arrow connecting timeline points */
+    position: absolute; /* Position arrow relative to timeline-container */
+    top: 50%; /* Vertically center the arrow */
+    left: 50%; /* Start arrow from the middle */
+    transform: translateX(-50%); /* Adjust to precisely center arrow horizontally */
+    width: 200px; /* Length of the arrow */
+    height: 5px; /* Thickness of the arrow line */
+    background-color: #007bff; /* Arrow color (primary blue) */
+    border-radius: 5px; /* Rounded arrow ends */
+    z-index: -1; /* Place arrow behind points */
+}
+
+.timeline-arrow::before { /* Arrowhead (using pseudo-element) */
+    content: '';
+    position: absolute;
+    right: 0; /* Position arrowhead at the right end */
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 15px solid #007bff; /* Arrowhead color matches arrow line */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
